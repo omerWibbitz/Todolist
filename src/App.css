@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+.todo-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    width: 50%;
+    background-color: antiquewhite;
+    margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-to-do {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-to-do input {
+    width: 80%;
+    border-radius: 6px;
+    border: 1px solid lightslategray;
+    padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-to-do input::placeholder {
+    padding: 10px;
+    font-size: 15px;
+    color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-to-do .addBtn {
+    width: 10%;
+    border-radius: 6px;
+    border: 1px solid lightslategray;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filters {
+    margin-top: 50px;
+    width: 20%;
+    justify-content: space-between;
+    display: flex;
+    color: lightskyblue;
+    text-transform: capitalize;
+}
+
+.filters .filter {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filters .selected {
+    color: green;
+}
+
+.tasks {
+    margin-top: 50px;
+}
+
+.tasks .task {
+    color: brown;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.incomplete {
+    text-decoration: line-through;
+    color: lightgray;
 }
